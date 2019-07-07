@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link
       rel="stylesheet"
@@ -11,11 +11,61 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-</head>
-<body>
-    <button onmousemove="changeColor();">Test</button>
-</body>
-<script src="assets/javscript/game.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card text-center card-bg border round">
+        <div class="card-header bg-dark border p-4">
+          <p class="h2 text-white">Crystal Game</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-4">
+            <div class="card text-white border-success round card-bg mt-3 ml-3">
+              <div class="card-header bg-success">
+                <p class="h4 bg-success">Wins</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title bg-success p-3" id="wins">0</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4">
+            <div class="card text-white border-success round card-bg mt-3 ml-3">
+              <div class="card-header bg-success">
+                <p class="h4 bg-success">Wins</p>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title bg-success p-3" id="wins">0</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4">
+            <div class="row">
+              <div class="card col-lg-11 col-sm-11">
+                <div class="card-header">
+                  Featured
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card col-lg-11 col-sm-11">
+                <div class="card-header">
+                  Featured
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="assets/javscript/game.js"></script>
 </html>
