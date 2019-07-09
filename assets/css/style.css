@@ -2,3 +2,16 @@ body {
     background-image: url("../images/body-bg.png");
     z-index: -1;
 }
+
+.h2{
+    font-family: 'Notable', sans-serif;
+}
+
+.card-title{
+    font-family: 'Black Ops One', cursive;
+}
+
+.card-img{
+    width: 150px;
+    margin: auto;
+}

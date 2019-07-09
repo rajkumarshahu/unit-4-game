@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Crystal Collector</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Notable&display=swap" rel="stylesheet">
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -17,20 +21,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="card text-center card-bg border round">
+    <div class="container bg-light">
+      <div class="card text-center card-bg border bg-light round">
         <div class="card-header bg-dark border p-4">
           <p class="h2 text-white">Crystal Collector</p>
         </div>
+        <div class="alert">
+          <div class="alert alert-info h5">Click on crystals to collect points</div>
+        </div>
         <div class="row">
           <div class="col-lg-4 col-sm-4">
-            <div class="card text-white border-success round card-bg mt-3 ml-3">
-              <div class="card-header bg-success">
-                <p class="h4 bg-success">Add up to the <br>number below:</p>
+            <div class="card text-white border-success round card-bg ml-3">
+              <div class="card-header bg-info">
+                <p class="h3 bg-info">Score to match:</p>
               </div>
-              <div class="card-body">
+              <div class="card-body bg-secondary">
                 <h5
-                  class="card-title bg-success p-3 display-4"
+                  class="card-title  p-2 display-4"
                   id="generated-number"
                 >
                   0
@@ -39,28 +46,26 @@
             </div>
           </div>
           <div class="col-lg-4 col-sm-4">
-            <div class="card text-white border-success round card-bg mt-3 ml-3">
-              <div class="card-header bg-success">
-                <p class="h4 bg-success">Your total<br> score is:</p>
+            <div class="card text-white border-success round card-bg ml-3">
+              <div class="card-header bg-info">
+                <p class="h3 ">Your score:</p>
               </div>
-              <div class="card-body">
-                <h5 class="card-title bg-success p-3 display-4" id="score">
+              <div class="card-body bg-secondary">
+                <h5 class="card-title p-2 display-4" id="score">
                   0
                 </h5>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-sm-4">
-            <div class="alert">
-              <div class="alert alert-info h5">Click on crystals to collect points</div>
-            </div>
+
             <div class="row">
               <div class="card col-lg-11 col-sm-11">
                 <div class="card-header">
                   <h4>Wins:</h4>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title" id="wins">0</h5>
+                  <h4 class="card-title" id="wins">0</h4>
                 </div>
               </div>
             </div>
@@ -70,7 +75,7 @@
                   <h4>Losses:</h4>
                 </div>
                 <div class="card-body bg-light ">
-                  <h5 class="card-title" id="loses">0</h5>
+                  <h4 class="card-title" id="loses">0</h4>
                 </div>
               </div>
             </div>

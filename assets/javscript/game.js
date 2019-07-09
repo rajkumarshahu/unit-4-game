@@ -8,7 +8,7 @@ $(() => {
 
   for (let i = 0; i < crystal.length; i++) {
     $(".images").append(
-      '<div class="col-3">' +
+      '<div class="col-lg-3 col-sm-6">' +
         '<div class="card m-3 ">' +
         '<img src="' +
         crystal[i].url +
@@ -19,48 +19,50 @@ $(() => {
         "</div>"
     );
   }
-
+//
   var wins = 0;
   var loses = 0;
   var score = 0;
 
-  let randomIntFromInterval = (minNum, maxNum) => {
+  let randomNumBetweenMaxMin = (minNum, maxNum) => {
     return Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
   };
 
-  let generatedNumber = randomIntFromInterval(19, 120);
-  let quartzValue = randomIntFromInterval(1, 20);
-  let sapphireValue = randomIntFromInterval(1, 20);
-  let squareValue = randomIntFromInterval(1, 20);
-  let rhomboidValue = randomIntFromInterval(1, 20);
+  let generatedNumber = randomNumBetweenMaxMin(19, 120);
+  let quartzValue = randomNumBetweenMaxMin(1, 20);
+  let sapphireValue = randomNumBetweenMaxMin(1, 20);
+  let squareValue = randomNumBetweenMaxMin(1, 20);
+  let rhomboidValue = randomNumBetweenMaxMin(1, 20);
 
   $("#generated-number").text(generatedNumber);
 
   let resetGame = () => {
     score = 0;
     $("#score").text(score);
-    generatedNumber = randomIntFromInterval(19, 120);
+    generatedNumber = randomNumBetweenMaxMin(19, 120);
     $("#generated-number").text(generatedNumber);
-    quartzValue = randomIntFromInterval(1, 20);
-    sapphireValue = randomIntFromInterval(1, 20);
-    squareValue = randomIntFromInterval(1, 20);
-    rhomboidValue = randomIntFromInterval(1, 20);
+    quartzValue = randomNumBetweenMaxMin(1, 20);
+    sapphireValue = randomNumBetweenMaxMin(1, 20);
+    squareValue = randomNumBetweenMaxMin(1, 20);
+    rhomboidValue = randomNumBetweenMaxMin(1, 20);
+
+    console.log("QU: "+quartzValue+" SA: "+sapphireValue+" SQ: "+squareValue+" RH: "+rhomboidValue);
   };
 
-  console.log("QU: "+quartzValue+" SA: "+sapphireValue+" SQ: "+squareValue+" RH: "+rhomboidValue);
+
 
 
   let winOrLose = ()=>{
-    $(".alert").html(`<div class="alert alert-success h5 p-4">You are Playing...</div>`);
+    $(".alert").html(`<div class="alert alert-success h5">You are Playing...</div>`);
     if (score == generatedNumber) {
       ++wins;
       $("#wins").text(wins);
-      $(".alert").html(`<div class="alert alert-success h5 p-4">You Win</div>`);
+      $(".alert").html(`<div class="alert alert-success h5">You Win !!!</div>`);
       resetGame();
     } else if (score > generatedNumber) {
       ++loses;
       $("#loses").text(loses);
-      $(".alert").html(`<div class="alert alert-danger h5 p-4">You lost</div`);
+      $(".alert").html(`<div class="alert alert-danger h5">You Lost !!!</div`);
       resetGame();
     }
   }
