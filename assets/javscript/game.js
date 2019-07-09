@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(() => {
   const crystal = [
     { name: "quartz-crystal", url: "assets/images/quartz-crystal.png" },
     { name: "sapphire-crystal", url: "assets/images/saphaire.jpeg" },
@@ -6,16 +6,15 @@ $(document).ready(function() {
     { name: "rhomboid-crystal", url: "assets/images/rhomboid-crystal.png" },
   ];
 
-
   for (let i = 0; i < crystal.length; i++) {
     $(".images").append(
-      '<div class="col-lg-3 col-sm-6 col-xs-6">' +
+      '<div class="col-3">' +
         '<div class="card m-3 ">' +
         '<img src="' +
         crystal[i].url +
         '" id="' +
         crystal[i].name +
-        '"/>' +
+        '" class = "card-img" />' +
         "</div>" +
         "</div>"
     );
@@ -91,81 +90,4 @@ $(document).ready(function() {
     $("#score").text(score);
     winOrLose();
   });
-
-
-
-
-
-    // $("#quartz-crystal").on("click", () => {
-    //   score = score + quartzValue;
-    //   $("#score").text(score);
-    //   if (score == generatedNumber) {
-    //     ++wins;
-    //     $("#wins").text(wins);
-    //     $(".alert").html('<div class="alert alert-success">You Win</div');
-    //     // alert("You Win");
-    //     resetGame();
-    //   } else if (score > generatedNumber) {
-    //     ++loses;
-    //     $("#loses").text(loses);
-    //     $(".alert").html('<div class="alert alert-danger">You lost</div');
-    //     // alert("You lost");
-    //     resetGame();
-    //   }
-    // });
-
-    // $("#sapphire-crystal").on("click", () => {
-    //   score = score + sapphireValue;
-    //   $("#score").text(score);
-    //   if (score == generatedNumber) {
-    //     ++wins;
-    //     $("#wins").text(wins);
-    //     $(".alert").text("You Win");
-    //     // alert("You Win");
-    //     resetGame();
-    //   } else if (score > generatedNumber) {
-    //     ++loses;
-    //     $("#loses").text(loses);
-    //     $(".alert").text("You Lost");
-    //     // alert("You lost");
-    //     resetGame();
-    //   }
-    // });
-
-    // $("#square-crystal").on("click", () => {
-    //   score = score + squareValue;
-    //   $("#score").text(score);
-    //   if (score == generatedNumber) {
-    //     ++wins;
-    //     $("#wins").text(wins);
-    //     $(".alert").text("You Win");
-    //     // alert("You Win");
-    //     resetGame();
-    //   } else if (score > generatedNumber) {
-    //     ++loses;
-    //     $("#loses").text(loses);
-    //     $(".alert").text("You Lost");
-    //     // alert("You lost");
-    //     resetGame();
-    //   }
-    // });
-
-    // $("#rhomboid-crystal").on("click", () => {
-    //   score = score + rhomboidValue;
-    //   $("#score").text(score);
-    //   if (score == generatedNumber) {
-    //     ++wins;
-    //     $("#wins").text(wins);
-    //     $(".alert").text("You Win");
-    //     // alert("You Win");
-    //     resetGame();
-    //   } else if (score > generatedNumber) {
-    //     ++loses;
-    //     $("#loses").text(loses);
-    //     $(".alert").text("You Lost");
-    //     // alert("You lost");
-    //     resetGame();
-    //   }
-    // });
-
 });
