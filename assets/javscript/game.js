@@ -36,7 +36,7 @@ $(() => {
 
   $("#generated-number").text(generatedNumber);
 
-  var resetGame = () => {
+  let resetGame = () => {
     score = 0;
     $("#score").text(score);
     generatedNumber = randomIntFromInterval(19, 120);
@@ -45,23 +45,22 @@ $(() => {
     sapphireValue = randomIntFromInterval(1, 20);
     squareValue = randomIntFromInterval(1, 20);
     rhomboidValue = randomIntFromInterval(1, 20);
-
-    console.log(quartzValue);
-    console.log(sapphireValue);
-    console.log(squareValue);
-    console.log(rhomboidValue);
   };
 
+  console.log("QU: "+quartzValue+" SA: "+sapphireValue+" SQ: "+squareValue+" RH: "+rhomboidValue);
+
+
   let winOrLose = ()=>{
+    $(".alert").html(`<div class="alert alert-success h5 p-4">You are Playing...</div>`);
     if (score == generatedNumber) {
       ++wins;
       $("#wins").text(wins);
-      $(".alert").html('<div class="alert alert-success">You Win</div');
+      $(".alert").html(`<div class="alert alert-success h5 p-4">You Win</div>`);
       resetGame();
     } else if (score > generatedNumber) {
       ++loses;
       $("#loses").text(loses);
-      $(".alert").html('<div class="alert alert-danger">You lost</div');
+      $(".alert").html(`<div class="alert alert-danger h5 p-4">You lost</div`);
       resetGame();
     }
   }
