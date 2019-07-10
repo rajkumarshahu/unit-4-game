@@ -20,7 +20,7 @@ $(() => {
         "</div>"
     );
   }
-// Global variables
+  // Global variables
   let wins = 0;
   let loses = 0;
   let score = 0;
@@ -30,9 +30,10 @@ $(() => {
     return Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
   };
 
-  // Random numbers to be matched
+  // Assigning Random number to be matched
   let generatedNumber = randomNumBetweenMaxMin(19, 120);
 
+  // Assigning behind the scene random numbers
   let quartzValue = randomNumBetweenMaxMin(1, 12);
   let sapphireValue = randomNumBetweenMaxMin(1, 12);
   let squareValue = randomNumBetweenMaxMin(1, 12);
@@ -53,9 +54,11 @@ $(() => {
     rhomboidValue = randomNumBetweenMaxMin(1, 12);
   };
 
-//Function to decide win or lose cases
-  let winOrLose = ()=>{
-    $(".alert").html(`<div class="alert alert-info h5">You are collecting crystals ...</div>`);
+  // Function to decide win or lose cases
+  let winOrLose = () => {
+    $(".alert").html(
+      `<div class="alert alert-info h5">You are collecting crystals ...</div>`
+    );
     if (score == generatedNumber) {
       ++wins;
       $("#wins").text(wins);
@@ -67,9 +70,9 @@ $(() => {
       $(".alert").html(`<div class="alert alert-danger h5">You Lost !!!</div`);
       resetGame();
     }
-  }
+  };
 
-// Attaching click event to quartz cystal image
+  // Attaching click event to quartz cystal image
   $("#quartz-crystal").on("click", () => {
     score = score + quartzValue;
     $("#score").text(score);
@@ -90,7 +93,7 @@ $(() => {
     winOrLose();
   });
 
-// Attaching click event to rhomboid cystal image
+  // Attaching click event to rhomboid cystal image
   $("#rhomboid-crystal").on("click", () => {
     score = score + rhomboidValue;
     $("#score").text(score);
